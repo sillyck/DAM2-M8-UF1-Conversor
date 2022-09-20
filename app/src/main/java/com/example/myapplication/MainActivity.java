@@ -37,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void calcular(View V){
         if(textnumber.getText().toString().isEmpty()){
-            Toast.makeText(this, "No estan buits", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "El camp esta buit", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "Hi ha un numero", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "El camp no esta buit", Toast.LENGTH_SHORT).show();
         }
     }
 }
