@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,10 +37,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(View V){
+
+        String prefixSegons = "00 : 00 :";
+
         if(textnumber.getText().toString().isEmpty()){
             Toast.makeText(this, "El camp esta buit", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "El camp no esta buit", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "El camp no esta buit", Toast.LENGTH_SHORT).show();
+
+            switch (spinner.getSelectedItem().toString()){
+                case "Hores":
+                    Toast.makeText(this, "Estas al camp hores", Toast.LENGTH_SHORT).show();
+                    break;
+                case "Minuts":
+                    Toast.makeText(this, "Estas al camp minuts", Toast.LENGTH_SHORT).show();
+                    break;
+                case "Segons":
+                    prefixSegons = prefixSegons + textnumber.getText().toString();
+                    break;
+            }
+
+
         }
     }
 }
