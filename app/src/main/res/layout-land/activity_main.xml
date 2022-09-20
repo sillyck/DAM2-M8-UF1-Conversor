@@ -43,12 +43,13 @@
 
     <Button
         android:id="@+id/boto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="49dp"
+        android:layout_width="192dp"
+        android:layout_height="155dp"
+        android:layout_marginBottom="44dp"
         android:onClick="calcular"
-        android:text="Calcular"
+        app:icon="@drawable/calculator"
         app:layout_constraintBottom_toTopOf="@+id/textView1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
