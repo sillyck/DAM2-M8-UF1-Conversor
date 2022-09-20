@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calcular(View V){
-        if(!TextUtils.isEmpty(textnumber.getText().toString()) && !TextUtils.isEmpty(spinner.getTooltipText().toString())){
-            Toast.makeText(this, "No estan buits", Toast.LENGTH_LONG);
+        if(textnumber.getText().toString().isEmpty()){
+            Toast.makeText(this, "No estan buits", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "Hi ha algo buit", Toast.LENGTH_LONG);
+            Toast.makeText(this, "Hi ha un numero", Toast.LENGTH_SHORT).show();
         }
     }
 }
