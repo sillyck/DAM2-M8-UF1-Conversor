@@ -38,7 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void calcular(View V){
 
-        String prefixSegons = "00 : 00 :";
+
+        int minuts = 0;
+        int hores = 0;
+        int segons = 0;
+        int segonsFormatInt = 0;
+        int minutsFormatInt = 0;
+
+        int modul = 0;
 
         if(textnumber.getText().toString().isEmpty()){
             Toast.makeText(this, "El camp esta buit", Toast.LENGTH_SHORT).show();
@@ -47,17 +54,34 @@ public class MainActivity extends AppCompatActivity {
 
             switch (spinner.getSelectedItem().toString()){
                 case "Hores":
-                    Toast.makeText(this, "Estas al camp hores", Toast.LENGTH_SHORT).show();
+
+                    String horesFormatText = textnumber.getText().toString();
+
+                    minutsFormatInt = Integer.parseInt(horesFormatText);
+
+
                     break;
                 case "Minuts":
                     Toast.makeText(this, "Estas al camp minuts", Toast.LENGTH_SHORT).show();
                     break;
                 case "Segons":
-                    prefixSegons = prefixSegons + textnumber.getText().toString();
+
+                    String segonsFormatText = textnumber.getText().toString();
+
+                    segonsFormatInt = Integer.parseInt(segonsFormatText);
+
+                    modul = segonsFormatInt % 60;
+
+                    segonsFormatInt = segonsFormatInt / 60;
+
                     break;
             }
 
+            if(segonsFormatInt<10 && modul<10) {
+                textView1.setText("00 : 0" + segonsFormatInt + ": 0" + modul);
+            }
 
         }
+        Toast.makeText(this, segonsFormatInt + ":" + modul, Toast.LENGTH_SHORT).show();
     }
 }
