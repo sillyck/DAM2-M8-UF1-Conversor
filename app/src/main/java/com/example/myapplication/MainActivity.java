@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,7 +16,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button boto;
+    private ImageButton boto;
     private TextView textView1, textnumber;
     private Spinner spinner;
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        boto = findViewById(R.id.boto);
+        boto = findViewById(R.id.ib2);
         textView1 = findViewById(R.id.textView1);
         spinner = findViewById(R.id.llistat);
         textnumber = findViewById(R.id.textNumber1);
