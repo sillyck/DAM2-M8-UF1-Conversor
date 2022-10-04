@@ -10,6 +10,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button boto;
@@ -44,35 +46,57 @@ public class MainActivity extends AppCompatActivity {
 
         if(textnumber.getText().toString().isEmpty()){
             Toast.makeText(this, "El camp esta buit", Toast.LENGTH_SHORT).show();
-        }else{
+        }else {
 
-            switch (spinner.getSelectedItem().toString()){
+            String tempsFormatText = textnumber.getText().toString();
+            double tempsFormatInt = Integer.parseInt(tempsFormatText);
+
+            switch (spinner.getSelectedItem().toString()) {
+                case "Setmanes":
+                    setmanes = tempsFormatInt;
+                    dies = tempsFormatInt * 7;
+                    hores = dies * 24;
+                    minuts = hores * 60;
+                    segons = minuts * 60;
+                    break;
+                case "Dies":
+                    dies = tempsFormatInt;
+                    setmanes = tempsFormatInt / 7;
+                    hores = tempsFormatInt * 24;
+                    minuts = hores * 60;
+                    segons = minuts * 60;
+                    break;
                 case "Hores":
-                    String horesFormatText = textnumber.getText().toString();
-                    horesFormatInt = Integer.parseInt(horesFormatText);
-                    dies = hores / 24;
+                    hores = tempsFormatInt;
+                    dies = tempsFormatInt / 24;
                     setmanes = dies / 7;
-                    hores = horesFormatInt;
-                    minuts = horesFormatInt * 60;
+                    minuts = tempsFormatInt * 60;
                     segons = minuts * 60;
                     break;
                 case "Minuts":
-                    Toast.makeText(this, "Estas al camp minuts", Toast.LENGTH_SHORT).show();
+                    minuts = tempsFormatInt;
+                    segons = minuts * 60;
+                    hores = tempsFormatInt / 60;
+                    dies = hores / 24;
+                    setmanes = dies / 7;
                     break;
                 case "Segons":
-                    String segonsFormatText = textnumber.getText().toString();
-                    segonsFormatInt = Integer.parseInt(segonsFormatText);
-                    segonsFormatInt = segonsFormatInt / 60;
+                    segons = tempsFormatInt;
+                    minuts = tempsFormatInt / 60;
+                    hores = minuts / 60;
+                    dies = hores / 24;
+                    setmanes = dies / 7;
                     break;
             }
 
-            textSetmanes.setText("Setmanes: " + setmanes);
-            textDies.setText("Dies: " + dies);
-            textHores.setText("Hores: " + hores);
-            textMinuts.setText("Minuts: " + minuts);
-            textSegons.setText("Segons: " + segons);
+            DecimalFormat decimals = new DecimalFormat("0.00");
+            decimals.setMaximumFractionDigits(2);
+            textSetmanes.setText("Setmanes: " + decimals.format(setmanes));
+            textDies.setText("Dies: " + decimals.format(dies));
+            textHores.setText("Hores: " + decimals.format(hores));
+            textMinuts.setText("Minuts: " + decimals.format(minuts));
+            textSegons.setText("Segons: " + decimals.format(segons));
 
         }
-        //Toast.makeText(this, dies + "" + hores + "" + segonsFormatInt + "" + modul, Toast.LENGTH_SHORT).show();
     }
 }
