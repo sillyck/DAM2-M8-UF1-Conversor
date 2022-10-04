@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/setmanes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00 : 00 : 00"
@@ -47,7 +47,10 @@
         android:layout_width="65dp"
         android:layout_height="71dp"
         android:onClick="calcular"
-        app:layout_constraintBottom_toTopOf="@+id/textView1"
+
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/setmanes"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
