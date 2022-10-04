@@ -1,11 +1,9 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,7 +14,7 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button boto;
+    private ImageButton boto;
     private TextView textSetmanes, textDies, textHores, textMinuts, textSegons, textnumber;
     private Spinner spinner;
 
@@ -26,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        boto = findViewById(R.id.boto);
+        boto = findViewById(R.id.ib2);
         textSetmanes = findViewById(R.id.setmanes);
         textDies = findViewById(R.id.dies);
         textHores = findViewById(R.id.hores);

@@ -16,31 +16,7 @@
         app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.558" />
-
-    <TextView
-        android:id="@+id/segons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Segons: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
-    <TextView
-        android:id="@+id/hores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hores: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.647" />
 
     <TextView
         android:id="@+id/dies"
@@ -52,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
+        app:layout_constraintVertical_bias="0.574" />
 
     <TextView
         android:id="@+id/setmanes"
@@ -64,21 +40,46 @@
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
+        app:layout_constraintVertical_bias="0.537" />
+
+    <TextView
+        android:id="@+id/hores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hores: 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.61" />
+
+    <TextView
+        android:id="@+id/segons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Segons: 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.685" />
+
 
     <EditText
         android:id="@+id/textNumber1"
         android:layout_width="192dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="26dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="98dp"
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/setmanes"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ib2"
         app:layout_constraintEnd_toStartOf="@+id/llistat"
-        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.295"
@@ -86,10 +87,10 @@
 
     <Spinner
         android:id="@+id/llistat"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginBottom="81dp"
         app:layout_constraintBottom_toTopOf="@+id/boto"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,16 +98,16 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-
     <ImageButton
         android:id="@+id/ib2"
         android:layout_width="64dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="51dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="402dp"
         android:onClick="calcular"
-        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumber1"
         app:srcCompat="@drawable/calculator"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
