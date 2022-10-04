@@ -13,10 +13,10 @@
         android:text="Minuts: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintVertical_bias="0.646" />
 
     <TextView
         android:id="@+id/dies"
@@ -25,22 +25,22 @@
         android:text="Dies: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574" />
+        app:layout_constraintVertical_bias="0.573" />
 
     <TextView
         android:id="@+id/setmanes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Setmanes: 0"
+        android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.28"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintVertical_bias="0.536" />
 
     <TextView
         android:id="@+id/hores"
@@ -49,10 +49,11 @@
         android:text="Hores: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.609" />
+
 
     <TextView
         android:id="@+id/segons"
@@ -61,11 +62,10 @@
         android:text="Segons: 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintHorizontal_bias="0.109"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
-
+        app:layout_constraintVertical_bias="0.684" />
 
     <EditText
         android:id="@+id/textNumber1"
@@ -110,4 +110,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textNumber1"
         app:srcCompat="@drawable/calculator"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/setmanesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setmanesText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/setmanes"
+        app:layout_constraintStart_toStartOf="@+id/dies" />
 </androidx.constraintlayout.widget.ConstraintLayout>

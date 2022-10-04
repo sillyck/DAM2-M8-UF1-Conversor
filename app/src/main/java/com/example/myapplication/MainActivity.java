@@ -89,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
                     setmanes = dies / 7;
                     break;
             }
-
+            String string = getString(R.string.setmanesText);
             DecimalFormat decimals = new DecimalFormat("0.00");
             decimals.setMaximumFractionDigits(2);
-            textSetmanes.setText("Setmanes: " + decimals.format(setmanes));
+            textSetmanes.setText(getString(R.string.setmanesText) + decimals.format(setmanes));
             textDies.setText("Dies: " + decimals.format(dies));
             textHores.setText("Hores: " + decimals.format(hores));
             textMinuts.setText("Minuts: " + decimals.format(minuts));
