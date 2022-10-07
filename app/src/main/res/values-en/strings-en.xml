@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="setmanesText">Weeks :</string>
+    <string name="diesText">Days :</string>
+    <string name="horesText">Hours :</string>
+    <string name="minutsText">Minutes :</string>
+    <string name="segonsText">Seconds :</string>
 </resources>
