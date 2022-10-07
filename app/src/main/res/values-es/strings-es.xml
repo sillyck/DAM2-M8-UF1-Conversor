@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Conversor</string>
+    <string name="setmanesText">Semanas :</string>
+    <string name="diesText">Dias :</string>
+    <string name="horesText">Horas :</string>
+    <string name="minutsText">Minutos :</string>
+    <string name="segonsText">Segundos :</string>
+</resources>

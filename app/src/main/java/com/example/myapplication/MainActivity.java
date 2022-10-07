@@ -1,22 +1,21 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    private Button boto;
+    private ImageButton boto;
     private TextView textSetmanes, textDies, textHores, textMinuts, textSegons, textnumber;
     private Spinner spinner;
 
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        boto = findViewById(R.id.boto);
+        boto = findViewById(R.id.ib2);
         textSetmanes = findViewById(R.id.setmanes);
         textDies = findViewById(R.id.dies);
         textHores = findViewById(R.id.hores);
@@ -35,7 +34,20 @@ public class MainActivity extends AppCompatActivity {
         spinner = findViewById(R.id.llistat);
         textnumber = findViewById(R.id.textNumber1);
 
-        String [] opcions = {"Setmanes", "Dies", "Hores", "Minuts", "Segons"};
+        String llenguatge = Locale.getDefault().getLanguage();
+        String[] opcions = {"Setmanes", "Dies", "Hores", "Minuts", "Segons"};
+
+        switch (llenguatge){
+            case "es":
+                opcions = new String[]{"Semanas", "Dias", "Horas", "Minutos", "Segundos"};
+                break;
+            case "en":
+                opcions = new String[]{"Weeks", "Days", "Hours", "Minutes", "Seconds"};
+                break;
+            default:
+                opcions = new String[]{"Setmanes", "Dies", "Hores", "Minuts", "Segons"};
+                break;
+        }
         ArrayAdapter <String> opcionsAdaptades = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, opcions);
 
         spinner.setAdapter(opcionsAdaptades);
@@ -91,14 +103,13 @@ public class MainActivity extends AppCompatActivity {
                     setmanes = dies / 7;
                     break;
             }
-
             DecimalFormat decimals = new DecimalFormat("0.00");
             decimals.setMaximumFractionDigits(2);
-            textSetmanes.setText("Setmanes: " + decimals.format(setmanes));
-            textDies.setText("Dies: " + decimals.format(dies));
-            textHores.setText("Hores: " + decimals.format(hores));
-            textMinuts.setText("Minuts: " + decimals.format(minuts));
-            textSegons.setText("Segons: " + decimals.format(segons));
+            textSetmanes.setText(decimals.format(setmanes));
+            textDies.setText(decimals.format(dies));
+            textHores.setText(decimals.format(hores));
+            textMinuts.setText(decimals.format(minuts));
+            textSegons.setText(decimals.format(segons));
 
         }
     }

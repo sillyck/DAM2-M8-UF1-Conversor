@@ -6,107 +6,144 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <TextView
+        android:id="@+id/segonsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/segonsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minutsText" />
+
+    <TextView
+        android:id="@+id/horesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/horesText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diesText" />
+
     <TextView
         android:id="@+id/minuts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Minuts: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="12dp"
+        android:text="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.558" />
-
-    <TextView
-        android:id="@+id/segons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Segons: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
-    <TextView
-        android:id="@+id/hores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hores: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintTop_toBottomOf="@+id/hores" />
 
     <TextView
         android:id="@+id/dies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dies: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
+        app:layout_constraintTop_toBottomOf="@+id/setmanes" />
 
     <TextView
         android:id="@+id/setmanes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Setmanes: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="300dp"
+        android:text="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dies" />
+
+    <TextView
+        android:id="@+id/segons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minuts" />
 
     <EditText
         android:id="@+id/textNumber1"
-        android:layout_width="192dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="26dp"
+        android:layout_width="189dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="20dp"
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/setmanes"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/llistat"
-        app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/llistat"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="81dp"
-        app:layout_constraintBottom_toTopOf="@+id/boto"
+        android:layout_marginEnd="23dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textNumber1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textNumber1"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textNumber1"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
 
     <ImageButton
         android:id="@+id/ib2"
         android:layout_width="64dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="51dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="49dp"
         android:onClick="calcular"
-        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintBottom_toTopOf="@+id/dies"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llistat"
         app:srcCompat="@drawable/calculator"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/setmanesText"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="300dp"
+        android:text="@string/setmanesText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/minutsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/minutsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horesText" />
+
+    <TextView
+        android:id="@+id/diesText"
+        android:layout_width="37dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/diesText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setmanesText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

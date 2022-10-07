@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Conversor</string>
+    <string name="setmanesText">Setmanes :</string>
+    <string name="diesText">Dies :</string>
+    <string name="horesText">Hores :</string>
+    <string name="minutsText">Minuts :</string>
+    <string name="segonsText">Segons :</string>
+
 </resources>
