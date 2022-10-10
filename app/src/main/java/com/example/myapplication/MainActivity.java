@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         boto = findViewById(R.id.ib2);
         textSetmanes = findViewById(R.id.setmanes);
         textDies = findViewById(R.id.dies);
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         textnumber = findViewById(R.id.textNumber1);
 
         String llenguatge = Locale.getDefault().getLanguage();
-        String[] opcions = {"Setmanes", "Dies", "Hores", "Minuts", "Segons"};
+        String[] opcions = {"", "", "", "", ""};
 
         switch (llenguatge){
             case "es":
@@ -55,9 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void calcular(View V){
 
-        double setmanes = 0, dies = 0, hores = 0, minuts = 0, segons = 0,
-                setmanesFormatInt = 0, diesFormatInt = 0, horesFormatInt = 0,
-                minutsFormatInt = 0, segonsFormatInt = 0;
+        double setmanesV = 0, dies = 0, hores = 0, minuts = 0, segons = 0;
 
         if(textnumber.getText().toString().isEmpty()){
             Toast.makeText(this, "El camp esta buit", Toast.LENGTH_SHORT).show();
@@ -66,46 +63,46 @@ public class MainActivity extends AppCompatActivity {
             String tempsFormatText = textnumber.getText().toString();
             double tempsFormatInt = Integer.parseInt(tempsFormatText);
 
-            switch (spinner.getSelectedItem().toString()) {
-                case "Setmanes":
-                    setmanes = tempsFormatInt;
+            switch (spinner.getSelectedItemPosition()) {
+                case 0:
+                    setmanesV = tempsFormatInt;
                     dies = tempsFormatInt * 7;
                     hores = dies * 24;
                     minuts = hores * 60;
                     segons = minuts * 60;
                     break;
-                case "Dies":
+                case 1:
                     dies = tempsFormatInt;
-                    setmanes = tempsFormatInt / 7;
+                    setmanesV = tempsFormatInt / 7;
                     hores = tempsFormatInt * 24;
                     minuts = hores * 60;
                     segons = minuts * 60;
                     break;
-                case "Hores":
+                case 2:
                     hores = tempsFormatInt;
                     dies = tempsFormatInt / 24;
-                    setmanes = dies / 7;
+                    setmanesV = dies / 7;
                     minuts = tempsFormatInt * 60;
                     segons = minuts * 60;
                     break;
-                case "Minuts":
+                case 3:
                     minuts = tempsFormatInt;
                     segons = minuts * 60;
                     hores = tempsFormatInt / 60;
                     dies = hores / 24;
-                    setmanes = dies / 7;
+                    setmanesV = dies / 7;
                     break;
-                case "Segons":
+                case 4:
                     segons = tempsFormatInt;
                     minuts = tempsFormatInt / 60;
                     hores = minuts / 60;
                     dies = hores / 24;
-                    setmanes = dies / 7;
+                    setmanesV = dies / 7;
                     break;
             }
             DecimalFormat decimals = new DecimalFormat("0.00");
             decimals.setMaximumFractionDigits(2);
-            textSetmanes.setText(decimals.format(setmanes));
+            textSetmanes.setText(decimals.format(setmanesV));
             textDies.setText(decimals.format(dies));
             textHores.setText(decimals.format(hores));
             textMinuts.setText(decimals.format(minuts));
