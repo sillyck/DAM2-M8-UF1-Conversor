@@ -7,6 +7,7 @@ L’alumne/a haurà d’implementar un conversor d’unitats de temps que permet
 
 ### Imatges
 
+[!Imatge](https://github.com/sillyck/DAM2-M8-UF1-Conversor/blob/main/src/foto.jpeg)
 
 ### Autors
 
