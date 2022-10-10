@@ -8,7 +8,7 @@ L’alumne/a haurà d’implementar un conversor d’unitats de temps que permet
 ### Imatges
 
 
-## Autors
+### Autors
 
 - [@Hector](https://github.com/Hector423)
 - [@Jordi](https://github.com/sillyck)
