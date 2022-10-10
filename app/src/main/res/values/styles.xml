@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="colorText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#F5EFE6</item>
+
+    </style>
+    <style name="fons" parent="TextAppearance.AppCompat">
+        <item name="android:background">#628E90</item>
+    </style>
+    <style name="spinner" parent="Theme.AppCompat.Light">
+        <item name="android:popupBackground">#B4CDE6</item>
+        <item name="android:textColor">#F5EFE6</item>
+    </style>
+</resources>
